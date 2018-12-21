@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    >
+
+  <LinearLayout
+      android:id="@+id/scroll_view"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:gravity="center"
+      android:visibility="gone"
+      >
+    <ProgressBar
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        />
+  </LinearLayout>
+
+
+  <android.support.v7.widget.RecyclerView
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      app:layout_constraintTop_toBottomOf="@id/scroll_view"
+      app:layout_constraintBottom_toTopOf="@id/home_holder"
+      android:id = "@+id/song_holder">
+
+  </android.support.v7.widget.RecyclerView>
+
+
+
+  <LinearLayout
+      android:id="@+id/home_holder"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:layout_constraintBottom_toBottomOf="parent"
+      android:orientation="horizontal"
+      >
+    <ImageButton
+        android:id="@+id/home_page_button"
+        android:layout_width="98dp"
+        android:layout_height="30dp"
+        android:background="@drawable/home_page"
+        android:layout_weight="1"
+        />
+    <ImageButton
+        android:id="@+id/other_button_1"
+        android:layout_width="98dp"
+        android:layout_height="30dp"
+        android:background="@drawable/home_page"
+        android:layout_weight="1"
+        />
+    <ImageButton
+        android:id="@+id/other_button_2"
+        android:layout_width="98dp"
+        android:layout_height="30dp"
+        android:background="@drawable/home_page"
+        android:layout_weight="1"
+        />
+    <ImageButton
+        android:id="@+id/other_button_3"
+        android:layout_width="98dp"
+        android:layout_height="30dp"
+        android:background="@drawable/home_page"
+        android:layout_weight="1"
+        />
+
+  </LinearLayout>
+
+  <LinearLayout
+      android:id="@+id/playlist_update_holder"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:visibility="invisible"
+      app:layout_constraintBottom_toBottomOf="parent"
+      >
+    <ImageButton
+        android:id="@+id/check_playlist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/checked"
+        android:layout_weight="1"
+        android:background="@android:color/white"
+        />
+    <ImageButton
+        android:id="@+id/cancel_playlist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/cancel"
+        android:layout_weight="1"
+        android:background="@android:color/white"
+        />
+
+  </LinearLayout>
+</android.support.constraint.ConstraintLayout>

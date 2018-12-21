@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/view_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/darker_gray"
+    >
+
+
+  <Button
+      android:id="@+id/video_button"
+      android:layout_width="100dp"
+      android:layout_height="100dp"
+      android:layout_marginTop="80dp"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      android:visibility="gone"
+      />
+
+  <RelativeLayout
+      android:id="@+id/progressbar_holder"
+      android:layout_width="280dp"
+      android:layout_height="20dp"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintBottom_toTopOf="@id/button_holder"
+      android:layout_marginBottom="0dp"
+      >
+    <ProgressBar
+        android:id="@+id/music_progressbar"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_centerVertical="true"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        />
+    <ImageView
+        android:id = "@+id/progressbar_button"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/small_button"
+        />
+  </RelativeLayout>
+
+
+
+  <RelativeLayout
+      android:id="@+id/button_holder"
+      android:layout_width="280dp"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="70dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      >
+    <ImageButton
+        android:id="@+id/previous_button"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/reverse_button"
+        />
+    <ImageButton
+        android:id="@+id/next_Button"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/next_button"
+        />
+
+    <ImageButton
+        android:id="@+id/stop_play_button"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/stop_button"
+        />
+  </RelativeLayout>
+
+  <ImageButton
+      android:id="@+id/play_mode_button"
+      android:layout_width="30dp"
+      android:layout_height="30dp"
+      android:background="@drawable/sequence_icon"
+      app:layout_constraintBottom_toTopOf="@+id/progressbar_holder"
+      app:layout_constraintRight_toRightOf="@id/progressbar_holder"
+      />
+</android.support.constraint.ConstraintLayout>
